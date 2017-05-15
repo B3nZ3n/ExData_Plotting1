@@ -10,6 +10,15 @@ data$Time <- strptime(data$Time, format="%I:%M")
 
 
 
+
+
+
+
+
+
+
+
+png(filename = "plot4.png")
 par(mfrow=c(2,2))
 plot(data$datetime,data$Global_active_power, ylab = "Global Active Power",type="l", xlab="")
 plot(data$datetime,data$Voltage, ylab = "Voltage",type="l", xlab="")
@@ -23,15 +32,6 @@ legend("topright",bty = "n",legend=names(data[,7:9]),
 
 
 plot(data$datetime,data$Global_reactive_power,type="l", xlab="dateime")
-
-
-
-
-
-
-
-
-png(filename = "plot4.png")
 
 
 dev.off()
